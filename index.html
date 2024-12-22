@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&A Burger Tempahan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>A&A Burger Tempahan</h1>
+        <p>Tempah burger anda dengan mudah, terus dihantar ke rumah!</p>
+    </header>
+
+    <section>
+        <label for="burgerSelect">Pilih Burger:</label>
+        <select id="burgerSelect">
+            <option value="3.50">Burger Benjo (RM3.50)</option>
+            <option value="5.50">Burger Double Benjo (RM5.50)</option>
+            <option value="4.00">Burger Ayam/Daging Biasa (RM4.00)</option>
+            <option value="5.00">Burger Ayam/Daging Spesial (RM5.00)</option>
+        </select>
+
+        <label for="burgerQuantity">Kuantiti:</label>
+        <input type="number" id="burgerQuantity" value="1" min="1">
+
+        <div class="addons">
+            <h3>Add Ons:</h3>
+            <label><input type="checkbox" id="addEgg"> Telur (RM2.00)</label><br>
+            <label><input type="checkbox" id="addChicken"> Ayam (RM2.00)</label><br>
+            <label><input type="checkbox" id="addCheese"> Cheese Slice (RM1.00)</label><br>
+            <label><input type="checkbox" id="addMeat"> Daging (RM2.00)</label>
+        </div>
+    </section>
+
+    <section>
+        <label for="deliveryAddress">Alamat Penghantaran:</label>
+        <input type="text" id="deliveryAddress" placeholder="Masukkan alamat lengkap anda" required>
+
+        <button id="addToCartBtn">Add to Cart</button>
+        <button id="cancelBtn" style="display:none;">Cancel</button>
+
+        <div class="cart-summary" id="cartItems"></div>
+
+        <div>
+            <p><strong>Total:</strong> RM <span id="totalAmount">0.00</span></p>
+            <p><strong>COD:</strong> RM <span id="codCharge">0.00</span></p>
+            <p><strong>Final Total:</strong> RM <span id="finalTotal">0.00</span></p>
+        </div>
+
+        <button id="orderBtn" disabled>Tempah Sekarang</button>
+    </section>
+
+    <footer>
+        <p>COD Cas berbeza mengikut lokasi. Minimum RM1, maksimum RM5. Potongan RM2 untuk pembelian lebih RM40.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
